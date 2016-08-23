@@ -1,0 +1,156 @@
+#container{
+	position: relative;
+	width: 1024px;
+	height: 768px;
+	margin: 0 auto;
+	background: url(../img/background.png) no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+	font-family: helveticaneuecyr-roman;
+}
+#container .night-sky{
+	width: 100%;
+	height: 275px;
+	background: url(../img/stars.png) no-repeat;
+}
+#container .smoke{
+	position: relative;
+	width: 100%;
+	height: 275px;
+	background: url(../img/smoke.png) no-repeat;
+}
+#container .text{
+	position: absolute;
+	left: 75px;
+	top: 117px;
+	width: 475px;
+	font-size: 30px;
+	color: #95ca00;
+}
+@keyframes water {
+	from { 	
+		bottom: -5px;
+	}
+	to{
+		bottom: 0px;
+	}
+}
+#container .water{
+	position: absolute;
+	width: 100%;
+	height: 521px;
+	bottom: 0;
+	background: url(../img/water.png) no-repeat;
+	background-size: 100% 100%;
+	animation-name: water;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes wave {
+	from { 	
+		bottom: 0;
+	}
+	to{
+		bottom: -5px;
+	}
+}
+#container .wave{
+	position: absolute;
+	width: 100%;
+	height: 524px;
+	bottom: 0;
+	background: url(../img/wave.png) no-repeat;
+	background-size: 100% 100%;
+	animation-name: wave;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes bomb{
+	from {
+		top: 266px;
+	} 
+	to {
+		top: 276px;
+	}
+}
+#container .bomb{
+	position: absolute;
+	top: 266px;
+	left: 146px;
+	width: 92px;
+	height: 80px;
+	background: url(../img/bomb.png) no-repeat;
+	cursor: pointer;
+	animation-name: bomb;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes tail{
+	from {
+		top: 346px;
+		transform: skewX(-5deg);
+		transform-origin: 0% 0%;
+	}
+	to {
+		top: 356px;
+		transform: skewX(5deg);
+		transform-origin: 0% 0%;
+	}
+}
+#container .tail{
+	position: absolute;
+	top: 346px;
+	left: 146px;
+	width: 92px;
+	height: 320px;
+	background: url(../img/tail.png) no-repeat;
+	animation-name: tail;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+#container .pop-up{
+	position: absolute;
+	left: 120%;
+	top: -30px;
+	width: 200px;
+	height: 72px;
+	background-color: #bcdbec;
+	opacity: .9;
+	border-radius: 10px;
+	box-sizing: border-box;
+	padding: 10px;
+	/*display: none;*/
+}
+#container .pop-up p{
+	font-size: 14px;
+	color: #152978;
+	text-align: center;
+}
+#container .pop-up p > span{
+	font-family: helveticaneuecyr-bold;
+	font-size: 22px;
+	color: #ff2400;
+	text-transform: uppercase;
+}
+#container .pop-up p > sup{
+	font-size: 10px; 
+	vertical-align:super; 
+}
+#container .pop-up::before{
+	content: '';
+	position: absolute;
+	left: -37px;
+	top: 43px;
+	width: 44px;
+	height: 22px;
+	background: url(../img/big-circle.png) no-repeat top right, url(../img/small-circle.png) no-repeat bottom left, 
+	url(../img/chain.png) no-repeat center;
+}
